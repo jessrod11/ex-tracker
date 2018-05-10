@@ -22,7 +22,7 @@ const writeEx = (ex) => {
 const writeLocations = (locations) => {
   let locationString = '';
   locations.forEach((location) => {
-    locationString += `<div class="col-sm-4 panel panel-default ex-container">`;
+    locationString += `<div class="col-sm-4 panel panel-default ex-container ${location.timeOfDay} hide">`;
     locationString += `<div class="panel-heading">`;
     locationString += `<h1 class="text-center panel-title">${location.name}</h1>`;
     locationString += `</div>`;
