@@ -1,10 +1,12 @@
 const loadExInfo = require('./exInfo');
+const writeToDom = require('./dom');
 
 const whenExLoads = (data) => {
-  console.log("Ex's Data", data.ex);
+  $('#ex-container').append(writeToDom.writeEx(data.ex));
 };
 
 const whenExLocationsLoad = (data) => {
+  $('#location-container').append(writeToDom.writeLocations(data.locations));
   console.log('Location Data', data.locations);
 };
 

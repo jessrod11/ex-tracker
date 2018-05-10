@@ -5,6 +5,15 @@ body {
 .button-container {
   margin-left: 40%;
 }
-.search-container {
+.padding{
   padding: 1%;
+}
+
+img {
+  width: 93%;
+  height: 400px;
+}
+
+.ex-container {
+  border: solid black 4px;
 }
