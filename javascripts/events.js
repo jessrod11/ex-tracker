@@ -1,17 +1,13 @@
-const dom = require('./dom');
+// const dom = require('./dom');
 const inputField = document.getElementById('search-field');
 
 const searchEvent = (locations) => {
-  console.log('anything there?',locations);
+  console.log(locations);
+  for (let i = 0; i < locations.length; i++) {
+    console.log('locations', locations[i]);
+  };
   inputField.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      const text = inputField.value;
-      const smallCaseName = locations.name.toLowerCase();
-      const results = smallCaseName.filter((thing) => {
-        return thing.name.indexOf(text);
-      });
-      dom.writeLocations(results);
-    };
+    console.log('input field', e);
   });
 };
 

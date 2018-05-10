@@ -11,7 +11,7 @@ const writeEx = (ex) => {
     exString += `<h2>Flaws</h2>`;
     exString += `<li>${ex.flaws[0]}</l1>`;
     exString += `<li>${ex.flaws[1]}</l1>`;
-    exString += `<li>${ex.flaws[1]}</l1>`;
+    exString += `<li>${ex.flaws[2]}</l1>`;
     exString += `<li>${ex.flaws[3]}</l1>`;
     exString += `</div>`;
     exString += `</div>`;
@@ -29,7 +29,7 @@ const writeLocations = (locations) => {
     locationString += `<div class="panel-body">`;
     locationString += `<img class="locationImg" src=${location.imageUrl}>`;
     locationString += `<h2 class="text-center">${location.address}</h2>`;
-    locationString += `<div class="panel-footer">`;
+    locationString += `<div class="panel-footer text-center">`;
     locationString += `<h3>${location.timeOfDay}</h3>`;
     locationString += `</div>`;
     locationString += `</div>`;
