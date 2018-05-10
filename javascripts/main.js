@@ -1,5 +1,9 @@
-console.log('Stix');
-
 const data = require('./data');
+// const events = require('./events');
 
-data();
+const startApp = () => {
+  data();
+  // events();
+};
+
+startApp();

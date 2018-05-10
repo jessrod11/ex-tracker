@@ -1,5 +1,6 @@
 const loadExInfo = require('./exInfo');
 const writeToDom = require('./dom');
+const events = require('./events');
 
 const whenExLoads = (data) => {
   $('#ex-container').append(writeToDom.writeEx(data.ex));
@@ -7,7 +8,7 @@ const whenExLoads = (data) => {
 
 const whenExLocationsLoad = (data) => {
   $('#location-container').append(writeToDom.writeLocations(data.locations));
-  console.log('Location Data', data.locations);
+  events(data);
 };
 
 const ifCodeFails = (error) => {
