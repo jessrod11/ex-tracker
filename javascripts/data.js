@@ -8,7 +8,7 @@ const whenExLoads = (data) => {
 
 const whenExLocationsLoad = (data) => {
   $('#location-container').append(writeToDom.writeLocations(data.locations));
-  events(data);
+  events.searchEvent(data.locations);
 };
 
 const ifCodeFails = (error) => {
