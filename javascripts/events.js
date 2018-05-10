@@ -81,6 +81,21 @@ const showDark = () => {
   };
 };
 
+const clearAll = () => {
+  for (let i = 0; i < dark.length; i++) {
+    dark[i].classList.add('hide');
+  };
+  for (let i = 0; i < afternoon.length; i++) {
+    afternoon[i].classList.add('hide');
+  };
+  for (let i = 0; i < morning.length; i++) {
+    morning[i].classList.add('hide');
+  };
+  for (let i = 0; i < evening.length; i++) {
+    evening[i].classList.add('hide');
+  };
+};
+
 const buttonEvents = () => {
   for (let i = 0; i < buttonGroup.length; i++) {
     buttonGroup[i].addEventListener('click', (e) => {
@@ -93,6 +108,8 @@ const buttonEvents = () => {
         showEvening();
       } else if (buttonTarget === 'dark') {
         showDark();
+      } else {
+        clearAll();
       }
     });
   };
