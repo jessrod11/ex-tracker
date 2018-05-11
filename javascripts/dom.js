@@ -6,7 +6,7 @@ const writeEx = (ex) => {
     exString += `<h1class="panel-title"> Name: ${ex.name}</h1>`;
     exString += `</div>`;
     exString += `<div class="panel-body">`;
-    exString += `<img class="img-rounded" src=${ex.imageUrl}>`;
+    exString += `<img class="img-rounded img-styles" src=${ex.imageUrl}>`;
     exString += `<h2> Age: ${ex.age}</h2>`;
     exString += `<h2>Flaws</h2>`;
     exString += `<li>${ex.flaws[0]}</l1>`;
@@ -22,16 +22,13 @@ const writeEx = (ex) => {
 const writeLocations = (locations) => {
   let locationString = '';
   locations.forEach((location) => {
-    locationString += `<div id="location-dom" class="col-sm-4 panel panel-default ex-container ${location.timeOfDay} hide">`;
+    locationString += `<div class="col-sm-4 panel text-center panel-default location-dom ex-container ${location.timeOfDay} hide">`;
     locationString += `<div class="panel-heading">`;
     locationString += `<h1 class="text-center panel-title">${location.name}</h1>`;
     locationString += `</div>`;
     locationString += `<div class="panel-body">`;
-    locationString += `<img class="locationImg" src=${location.imageUrl}>`;
+    locationString += `<img class="img-styles" src=${location.imageUrl}>`;
     locationString += `<h2 class="text-center">${location.address}</h2>`;
-    locationString += `<div class="panel-footer text-center">`;
-    locationString += `<h3>${location.timeOfDay}</h3>`;
-    locationString += `</div>`;
     locationString += `</div>`;
     locationString += `</div>`;
   });

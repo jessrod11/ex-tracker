@@ -1,7 +1,7 @@
 # Ex-Tracker
 
 ## Description
-Practice HTML and CSS by copying design from CSS Zen Garden. Focused on writing semantic HTML and having well organized CSS.
+
 
 ## Screenshot
 ![Webpage]()
