@@ -29,6 +29,7 @@ const writeLocations = (locations) => {
     locationString += `<div class="panel-body">`;
     locationString += `<img class="img-styles" src=${location.imageUrl}>`;
     locationString += `<h2 class="text-center">${location.address}</h2>`;
+    locationString += `<h3 class="time">${location.timeOfDay}</h3>`;
     locationString += `</div>`;
     locationString += `</div>`;
   });

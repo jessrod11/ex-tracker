@@ -1,6 +1,6 @@
-const dom = require('./dom');
+// const dom = require('./dom');
 
-const inputField = document.getElementById('search-field');
+// const inputField = document.getElementById('search-field');
 const buttonGroup = document.getElementsByClassName('button-container');
 
 const morning = document.getElementsByClassName('morning');
@@ -8,23 +8,23 @@ const afternoon = document.getElementsByClassName('afternoon');
 const evening = document.getElementsByClassName('evening');
 const dark = document.getElementsByClassName('dark');
 
-const searchEvent = (locations) => {
-  console.log('locations', locations);
-  locations.forEach((location) => {
-    const locationName = location.name;
-    // const locationAddy = location.address;
-    inputField.addEventListener('keypress', (e) => {
-      console.log('input field', e);
-      if (e.key === 'Enter') {
-        const userInput = inputField.value.toLowerCase();
-        const results = locationName.filter((location) => {
-          return location.indexOf(userInput) > -1;
-        });
-        dom.writeLocations(results);
-      };
-    });
-  });
-};
+// const searchEvent = (locations) => {
+//   console.log('locations', locations);
+//   locations.forEach((location) => {
+//     const locationName = location.name;
+//     // const locationAddy = location.address;
+//     inputField.addEventListener('keypress', (e) => {
+//       console.log('input field', e);
+//       if (e.key === 'Enter') {
+//         const userInput = inputField.value.toLowerCase();
+//         const results = locationName.filter((location) => {
+//           return location.indexOf(userInput) > -1;
+//         });
+//         dom.writeLocations(results);
+//       };
+//     });
+//   });
+// };
 
 const showMorning = () => {
   for (let i = 0; i < morning.length; i++) {
@@ -122,6 +122,5 @@ const buttonEvents = () => {
 };
 
 module.exports = {
-  searchEvent,
   buttonEvents,
 };
