@@ -4,73 +4,85 @@
       "name": "Frist Museum for the Visual Arts",
       "imageUrl": "https://i.pinimg.com/736x/4b/fb/7c/4bfb7ca7ed1bedbcf582515ad078feaa--nashville-art-nashville-tennessee.jpg",
       "address": "919 Broadway, Nashville, TN 37203",
-      "timeOfDay": "evening"
+      "timeOfDay": "evening",
+      "locationId": 1
     },
     {
       "name": "The Post East",
       "imageUrl": "https://static1.squarespace.com/static/54fe53ede4b07f58e41331e2/t/5840de436a4963eb481acdcd/1480646220980/?format=750w",
       "address": "1701 Fatherland St, Nashville, TN 37206",
-      "timeOfDay": "morning"
+      "timeOfDay": "morning",
+      "locationId": 2
     },
     {
       "name": "Chopt Creative Salad Co",
       "imageUrl": "https://brentwoodhomepage.com/wp-content/uploads/2018/02/IMG_3197.jpg",
       "address": "211 Franklin Rd, Brentwood TN 37207",
-      "timeOfDay": "afternoon"
+      "timeOfDay": "afternoon",
+      "locationId": 3
     },
     {
       "name": "Essence Barber Shop",
       "imageUrl": "https://ae01.alicdn.com/kf/HTB1GM7_KpXXXXXJXpXXq6xXFXXXZ/Barbershop-Vinyl-Wall-Decal-Sticker-Scciors-BARBER-SHOP-Quote-Art-Interior-Mural-Wall-Sticker-Decor-HAir.jpg_640x640.jpg",
       "address": "801 Bell Rd, Antioch TN 37013",
-      "timeOfDay": "afternoon"
+      "timeOfDay": "afternoon",
+      "locationId": 4
     },
     {
       "name": "Exit/In",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/WTN_EVula_006.jpg/1200px-WTN_EVula_006.jpg",
       "address": "2208 Elliston Pl, Nashville TN 37203",
-      "timeOfDay": "dark"
+      "timeOfDay": "dark",
+      "locationId": 5
     },
     {
       "name": "Tavern",
       "imageUrl": "http://nashvilleguru.com/officialwebsite/wp-content/uploads/2011/06/Midtown-Feb-2014-Nashville-TN-54.jpg",
       "address": "1904 Broadway, Nashville, TN 37203",
-      "timeOfDay": "morning"
+      "timeOfDay": "morning",
+      "locationId": 6
     },
     {
       "name": "Zanies Comedy Night Club",
       "imageUrl": "https://i.gse.io/gse_media/115/6/1435881695-zanies-tickets-2.jpg?h=520&p=1&q=60&w=920&c=1",
       "address": "2025 8th Ave S, Nashville TN 37204",
-      "timeOfDay": "dark"
+      "timeOfDay": "dark",
+      "locationId": 7
     },
     {
       "name": "Urban Outfitters",
       "imageUrl": "https://i.pinimg.com/originals/eb/85/7c/eb857c160af7de9c7440875409b283a4.jpg",
       "address": "405 12th Ave S, Nashville TN 37203",
-      "timeOfDay": "evening"
+      "timeOfDay": "evening",
+      "locationId": 8
     },
     {
       "name": "His Crib",
       "imageUrl": "https://pbs.twimg.com/profile_images/624244720751935488/tKBveW2J_400x400.jpg",
       "address": "535 Main St, Nashville TN 37206",
-      "timeOfDay": "morning"
+      "timeOfDay": "morning",
+      "locationId": 9
     },
     {
       "name": "Mas Tacos Por Favor",
       "imageUrl": "https://imsouthernnow.files.wordpress.com/2015/07/img_0056.jpg",
       "address": "732 McFerrin Ave, Nashville TN 37206",
-      "timeOfDay": "afternoon"
+      "timeOfDay": "afternoon",
+      "locationId": 10
     },
     {
       "name": "His Crib",
       "imageUrl": "https://pbs.twimg.com/profile_images/624244720751935488/tKBveW2J_400x400.jpg",
       "address": "535 Main St, Nashville TN 37206",
-      "timeOfDay": "dark"
+      "timeOfDay": "dark",
+      "locationId": 11
     },
     {
       "name": "Aladdin's Hookah Lounge and Bar",
       "imageUrl": "http://nashvilleguru.com/officialwebsite/wp-content/uploads/2011/08/Aladdins-Hookah-Elliston-Nashville-TN.jpg",
       "address": "2206 Elliston Pl, Nashville, TN 37203",
-      "timeOfDay": "evening"
+      "timeOfDay": "evening",
+      "locationId": 12
     }
   ]
 }
