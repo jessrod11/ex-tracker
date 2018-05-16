@@ -1,19 +1,30 @@
 body {
-  background-color: blue;
+    background-image: url('http://netdoctor.cdnds.net/16/17/980x490/landscape-1461841954-broken-heart.jpg');
+    background-size: cover;
+    height: 100vh;
 }
 
-.button-container {
-  margin-left: 40%;
+ .navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
 }
+
 .padding{
   padding: 1%;
 }
 
-img {
+.img-styles {
   width: 93%;
   height: 400px;
 }
 
 .ex-container {
   border: solid black 4px;
+}
+
+.button-container {
+  margin-left: 37%;
+}
+
+.ex-pic {
+ width: 17%;
 }
