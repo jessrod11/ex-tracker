@@ -1,6 +1,22 @@
 {
   "ex": [
     {
+      "name": "Michael 'In My Dreams' Jordan",
+      "age": 31,
+      "imageUrl": "http://www.jamesbort.com/wp-content/uploads/2016/07/Michael-B-Jordan-james-bort-piaget.jpg",
+      "flaws": [
+        "I'm pretty sure he is bi-polar.",
+        "He holds a major grudge if he feels you've hurt him or done him wrong.",
+        "He is super maniupulative!",
+        "So cocky!."
+      ],
+      "locations": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
       "name": "Erik Killmonger",
       "age": 30,
       "imageUrl": "https://data.whicdn.com/images/299694505/original.gif",
@@ -9,6 +25,75 @@
         "He holds a major grudge if he feels you've hurt him or done him wrong.",
         "He is super maniupulative!",
         "He has really weird marks on his body."
+      ],
+      "locations": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Aubrey'I would Never' Graham",
+      "age": 31,
+      "imageUrl": "http://static-34.sinclairstoryline.com/resources/media/16276414-28dc-422a-804b-871ec45cc421-large16x9_wenn32237707.jpg?1518822979566",
+      "flaws": [
+        "Super Sensitive.",
+        "Clingy.",
+        "Inability to be faithful",
+        "Cries when he gets caught!"
+      ],
+      "locations": [
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "J-Boog",
+      "age": 32,
+      "imageUrl": "http://static1.dallasblack.com/Articles/JBoog2_article.jpg",
+      "flaws": [
+        "Lacks ambition.",
+        "Still lives with his mom.",
+        "He is super maniupulative!",
+        "Can't leave the past in the past"
+      ],
+      "locations": [
+        4,
+        8,
+        11
+      ]
+    },
+    {
+      "name": "Bow Wow",
+      "age": 31,
+      "imageUrl": "http://popgoestheweek.com/wp-content/uploads/2011/07/bowwow.png",
+      "flaws": [
+        "Inability to be faitful",
+        "Super short!",
+        "Moma's Boy",
+        "Baby mama Drama"
+      ],
+      "locations": [
+        11,
+        9,
+        8
+      ]
+    },
+    {
+      "name": "Lance Bass",
+      "age": 39,
+      "imageUrl": "http://www.nsync-fans.com/images/lance_l.jpg",
+      "flaws": [
+        "Totally into guys!",
+        "Habitual liar!",
+        "Vain and Cocky",
+        "Dressed better than me!"
+      ],
+      "locations": [
+        12,
+        10,
+        2
       ]
     }
   ]
