@@ -1,9 +1,6 @@
 const data = require('./data');
-const events = require('./events');
+require('./events');
 
-const startApp = () => {
+$(document).ready(() => {
   data();
-  events.buttonEvents();
-};
-
-startApp();
+});
