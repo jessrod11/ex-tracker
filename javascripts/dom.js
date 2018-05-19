@@ -22,14 +22,14 @@ const writeEx = (ex) => {
 const writeLocations = (locations) => {
   let locationString = '';
   locations.forEach((location) => {
-    locationString += `<div class="col-sm-4 panel text-center panel-default location-dom ex-container ${location.timeOfDay}">`;
+    locationString += `<div class=" time col-sm-4 panel text-center panel-default location-dom ex-container ${location.timeOfDay} card">`;
     locationString += `<div class="panel-heading">`;
     locationString += `<h1 class="text-center panel-title">${location.name}</h1>`;
     locationString += `</div>`;
     locationString += `<div class="panel-body">`;
     locationString += `<img class="img-styles" src=${location.imageUrl}>`;
     locationString += `<h2 class="text-center">${location.address}</h2>`;
-    locationString += `<h3 class="time">${location.timeOfDay}</h3>`;
+    locationString += `<h3>${location.timeOfDay}</h3>`;
     locationString += `</div>`;
     locationString += `</div>`;
   });

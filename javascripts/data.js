@@ -1,4 +1,5 @@
 const dom = require('./dom');
+const events = require('./events');
 
 // Promise Constructor
 
@@ -32,6 +33,7 @@ const initializer = () => {
   });
   getLocationsJson().then((result2) => {
     dom.writeLocations(result2);
+    events();
   });
 };
 

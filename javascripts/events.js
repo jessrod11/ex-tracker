@@ -1,126 +1,57 @@
-// const dom = require('./dom');
-
-// const inputField = document.getElementById('search-field');
-const buttonGroup = document.getElementsByClassName('button-container');
-
-const morning = document.getElementsByClassName('morning');
-const afternoon = document.getElementsByClassName('afternoon');
-const evening = document.getElementsByClassName('evening');
-const dark = document.getElementsByClassName('dark');
-
-// const searchEvent = (locations) => {
-//   console.log('locations', locations);
-//   locations.forEach((location) => {
-//     const locationName = location.name;
-//     // const locationAddy = location.address;
-//     inputField.addEventListener('keypress', (e) => {
-//       console.log('input field', e);
-//       if (e.key === 'Enter') {
-//         const userInput = inputField.value.toLowerCase();
-//         const results = locationName.filter((location) => {
-//           return location.indexOf(userInput) > -1;
-//         });
-//         dom.writeLocations(results);
-//       };
-//     });
-//   });
-// };
-
-const showMorning = () => {
-  for (let i = 0; i < morning.length; i++) {
-    morning[i].classList.remove('hide');
+$.expr[':'].icontains = $.expr.createPseudo(function (text) {
+  return function (e) {
+    return $(e).text().toUpperCase().indexOf(text.toUpperCase()) >= 0;
   };
-  for (let i = 0; i < afternoon.length; i++) {
-    afternoon[i].classList.add('hide');
-  };
-  for (let i = 0; i < evening.length; i++) {
-    evening[i].classList.add('hide');
-  };
-  for (let i = 0; i < dark.length; i++) {
-    dark[i].classList.add('hide');
-  };
+});
+
+const searchKeypress = () => {
+  $('#search-field').keypress(function (e) {
+    const input = $('#search-field').val();
+    if (e.which === 13) {
+      $(`#location-container .card:not(:icontains(${input}))`).hide();
+    }
+  });
 };
 
-const showAfternoon = () => {
-  for (let i = 0; i < afternoon.length; i++) {
-    afternoon[i].classList.remove('hide');
-  };
-  for (let i = 0; i < morning.length; i++) {
-    morning[i].classList.add('hide');
-  };
-  for (let i = 0; i < evening.length; i++) {
-    evening[i].classList.add('hide');
-  };
-  for (let i = 0; i < dark.length; i++) {
-    dark[i].classList.add('hide');
-  };
+const searchClick = () => {
+  $('#submitBtn').click(function (e) {
+    const input = $('#searchBar').val();
+    $(`#location-container .card:not(:icontains(${input}))`).hide();
+  });
 };
 
-const showEvening = () => {
-  for (let i = 0; i < evening.length; i++) {
-    evening[i].classList.remove('hide');
-  };
-  for (let i = 0; i < morning.length; i++) {
-    morning[i].classList.add('hide');
-  };
-  for (let i = 0; i < afternoon.length; i++) {
-    afternoon[i].classList.add('hide');
-  };
-  for (let i = 0; i < dark.length; i++) {
-    dark[i].classList.add('hide');
-  };
+const refresh = () => {
+  $('.card').removeClass('hide');
 };
 
-const showDark = () => {
-  for (let i = 0; i < dark.length; i++) {
-    dark[i].classList.remove('hide');
-  };
-  for (let i = 0; i < afternoon.length; i++) {
-    afternoon[i].classList.add('hide');
-  };
-  for (let i = 0; i < morning.length; i++) {
-    morning[i].classList.add('hide');
-  };
-  for (let i = 0; i < evening.length; i++) {
-    evening[i].classList.add('hide');
-  };
+const filterMorning = () => {
+  $('.time').not('.morning').closest('.card').addClass('hide');
+  $('.time').filter('.morning').closest('.card').removeClass('hide');
 };
 
-const clearAll = () => {
-  for (let i = 0; i < dark.length; i++) {
-    dark[i].classList.add('hide');
-  };
-  for (let i = 0; i < afternoon.length; i++) {
-    afternoon[i].classList.add('hide');
-  };
-  for (let i = 0; i < morning.length; i++) {
-    morning[i].classList.add('hide');
-  };
-  for (let i = 0; i < evening.length; i++) {
-    evening[i].classList.add('hide');
-  };
+const filterAfternoon = () => {
+  $('.time').not('.afternoon').closest('.card').addClass('hide');
+  $('.time').filter('.afternoon').closest('.card').removeClass('hide');
 };
 
-const buttonEvents = () => {
-  for (let i = 0; i < buttonGroup.length; i++) {
-    buttonGroup[i].addEventListener('click', (e) => {
-      console.log('button', e);
-      const buttonTarget = e.target.innerHTML.toLowerCase();
-      if (buttonTarget === 'morning') {
-        showMorning();
-      } else if (buttonTarget === 'afternoon') {
-        showAfternoon();
-      } else if (buttonTarget === 'evening') {
-        showEvening();
-      } else if (buttonTarget === 'dark') {
-        showDark();
-      } else {
-        clearAll();
-      }
-    });
-  };
+const filterEvening = () => {
+  $('.time').not('.evening').closest('.card').addClass('hide');
+  $('.time').filter('.evening').closest('.card').removeClass('hide');
 };
 
-module.exports = {
-  buttonEvents,
+const filterAfterDark = () => {
+  $('.time').not('.dark').closest('.card').addClass('hide');
+  $('.time').filter('.dark').closest('.card').removeClass('hide');
 };
+
+const bindEvents = () => {
+  $('#clear-btn').on('click', refresh);
+  $('#morning-btn').on('click', filterMorning);
+  $('#afternoon-btn').on('click', filterAfternoon);
+  $('#evening-btn').on('click', filterEvening);
+  $('#dark-btn').on('click', filterAfterDark);
+  searchKeypress();
+  searchClick();
+};
+
+module.exports = bindEvents;
