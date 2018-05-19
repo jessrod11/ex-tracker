@@ -1,7 +1,7 @@
 const writeEx = (ex) => {
   let exString = '';
   ex.forEach((ex) => {
-    exString += `<div class="col-md-4 text-center ex-container panel panel-default">`;
+    exString += `<div class="col-md-4 ex-container text-center panel panel-default">`;
     exString += `<div class="panel-heading">`;
     exString += `<h1class="panel-title"> Name: ${ex.name}</h1>`;
     exString += `</div>`;
@@ -16,24 +16,24 @@ const writeEx = (ex) => {
     exString += `</div>`;
     exString += `</div>`;
   });
-  return exString;
+  $('#ex-container').append(exString);
 };
 
 const writeLocations = (locations) => {
   let locationString = '';
   locations.forEach((location) => {
-    locationString += `<div class="col-sm-4 panel text-center panel-default location-dom ex-container ${location.timeOfDay} hide">`;
+    locationString += `<div class=" time col-sm-4 panel text-center panel-default location-dom ex-container ${location.timeOfDay} card">`;
     locationString += `<div class="panel-heading">`;
     locationString += `<h1 class="text-center panel-title">${location.name}</h1>`;
     locationString += `</div>`;
     locationString += `<div class="panel-body">`;
     locationString += `<img class="img-styles" src=${location.imageUrl}>`;
     locationString += `<h2 class="text-center">${location.address}</h2>`;
-    locationString += `<h3 class="time">${location.timeOfDay}</h3>`;
+    locationString += `<h3>${location.timeOfDay}</h3>`;
     locationString += `</div>`;
     locationString += `</div>`;
   });
-  return locationString;
+  $('#location-container').append(locationString);
 };
 
 module.exports = {

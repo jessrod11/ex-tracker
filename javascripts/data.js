@@ -1,23 +1,40 @@
-const loadExInfo = require('./exInfo');
-const writeToDom = require('./dom');
-// const events = require('./events');
+const dom = require('./dom');
 
-const whenExLoads = (data) => {
-  $('#ex-container').append(writeToDom.writeEx(data.ex));
+// Promise Constructor
+
+const getExJson = () => {
+  return new Promise ((resolve, reject) => {
+    $.get('../db/ex.json')
+      .done((data) => {
+        resolve(data.ex);
+      })
+      .fail((err) => {
+        reject('Uh-oh, Stix', err);
+      });
+  });
 };
 
-const whenExLocationsLoad = (data) => {
-  $('#location-container').append(writeToDom.writeLocations(data.locations));
-  // events.searchEvent(data.locations);
-};
-
-const ifCodeFails = (error) => {
-  console.log('OH CRAP!', error);
+const getLocationsJson = () => {
+  return new Promise ((resolve, reject) => {
+    $.get('../db/locations.json')
+      .done((data) => {
+        resolve(data.locations);
+      })
+      .fail((err) => {
+        reject('Uh-oh, Stix', err);
+      });
+  });
 };
 
 const initializer = () => {
-  loadExInfo.loadEx(whenExLoads, ifCodeFails);
-  loadExInfo.loadLocations(whenExLocationsLoad, ifCodeFails);
+  getExJson().then((result) => {
+    dom.writeEx(result);
+  });
+  getLocationsJson().then((result2) => {
+    dom.writeLocations(result2);
+  });
 };
 
-module.exports = initializer;
+module.exports = {
+  initializer,
+};
