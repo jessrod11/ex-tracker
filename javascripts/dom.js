@@ -1,7 +1,7 @@
 const writeEx = (ex) => {
   let exString = '';
   ex.forEach((ex) => {
-    exString += `<div class="col-md-6  text-center ex-container panel panel-default">`;
+    exString += `<div class="col-md-4 ex-container text-center panel panel-default">`;
     exString += `<div class="panel-heading">`;
     exString += `<h1class="panel-title"> Name: ${ex.name}</h1>`;
     exString += `</div>`;

@@ -1,6 +1,4 @@
-// const loadExInfo = require('./exInfo');
 const dom = require('./dom');
-// const events = require('./events');
 
 // Promise Constructor
 
@@ -27,20 +25,6 @@ const getLocationsJson = () => {
       });
   });
 };
-
-// const grabBoth = () => {
-//   let info = [];
-//   return getExJson()
-//     .then((results) => {
-//       info = [...results,];
-//       return getLocationsJson();
-//     }).then((results2) => {
-//       info = [...info, ...results2,];
-//       return Promise.resolve(info);
-//     }).catch((errorMsg) => {
-//       console.log(errorMsg);
-//     });
-// };
 
 const initializer = () => {
   getExJson().then((result) => {
